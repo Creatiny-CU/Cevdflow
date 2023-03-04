@@ -27,7 +27,11 @@ function Profile() {
                                 display: "flex",
                             }}
                         >
-                            <Avatar></Avatar>
+                            <Avatar style={{
+                                width: "30%",
+                                height: "30%",
+
+                            }} ></Avatar>
                             <Typography
                                 style={{
                                     fontWeight: "bold",
@@ -178,7 +182,7 @@ function Profile() {
                             <Grid container spacing={5}>
                                 <Grid item md={4}>
                                     {" "}
-                                    <p style={{ fontWeight: "bold" }}>Homepage Frontend </p>
+                                    <p style={{ fontWeight: "bold" }}>Menu Page Frontend </p>
                                     <img
                                         style={{
                                             width: "100%",

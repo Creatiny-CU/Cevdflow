@@ -125,6 +125,7 @@ import InputBase from '@mui/material/InputBase';
 import Grid from '@mui/material/Grid';
 import SearchIcon from '@mui/icons-material/Search';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import Button from '@mui/material/Button';
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -239,10 +240,24 @@ export default function SearchAppBar() {
                             />
                         </Search></Grid> */}
                         <Grid style={{ right: '20px', position: 'absolute' }} item md={4}>
-                            <IconButton sx={{ p: 0 }}>
-                                <a style={{ textDecoration: 'none' }} href="/profile">  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /></a>
+                            <Grid container spacing={3} >   <Grid item >
+                                <Button style={{
+                                    backgroundColor: '#1E1E56',
+                                    color: 'white',
+                                    textDecoration: 'none',
+                                    textTransform: 'none',
+                                    border: '1px solid white'
+                                }} >Connect Wallet</Button>
+                            </Grid>
+                                <Grid item >
+                                    <IconButton sx={{ p: 0 }}>
+                                        <a style={{ textDecoration: 'none' }} href="/profile">  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /></a>
 
-                            </IconButton>
+                                    </IconButton>
+                                </Grid>
+
+                            </Grid>
+
                         </Grid>
 
                     </Grid>
