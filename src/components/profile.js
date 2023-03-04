@@ -64,10 +64,10 @@ function Profile() {
                                 color: "#1E1E56",
                             }}
                         >
-                            Education
+                            Hourly Wage
                         </Typography>
                         <p style={{ fontSize: "12px", marginTop: "0rem" }}>
-                            Çukurova University{" "}
+                            20$ - 30$ per hour
                         </p>{" "}
                         <Typography
                             style={{
@@ -93,6 +93,20 @@ function Profile() {
                             Languages
                         </Typography>
                         <p style={{ fontSize: "12px", marginTop: "0rem" }}>English </p>
+                        <Typography
+                            style={{
+                                fontWeight: "bold",
+                                marginTop: "1rem",
+
+                                fontSize: "15px",
+                                color: "#1E1E56",
+                            }}
+                        >
+                            Education
+                        </Typography>
+                        <p style={{ fontSize: "12px", marginTop: "0rem" }}>
+                            Çukurova University{" "}
+                        </p>{" "}
                     </Card>
                 </Grid>
                 <Grid item md={9}>
@@ -133,7 +147,7 @@ function Profile() {
                                 </Grid>
                                 <Grid item md={4}>
                                     {" "}
-                                    <p style={{ fontWeight: "bold" }}>Job</p>{" "}
+                                    <p style={{ fontWeight: "bold" }}>Description</p>{" "}
                                     <p style={{ marginBottom: "0px" }}>
                                         {" "}
                                         I have a one page html /css site that I need to turn from
@@ -174,7 +188,7 @@ function Profile() {
                                 </Grid>
                                 <Grid item md={4}>
                                     {" "}
-                                    <p style={{ fontWeight: "bold" }}>Job</p>{" "}
+                                    <p style={{ fontWeight: "bold" }}>Description</p>{" "}
                                     <p style={{ marginBottom: "0px" }}>
                                         {" "}
                                         Looking for an angular developer good in css and html to do some customisation on the same who should be available for 4 hours from now.

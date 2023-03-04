@@ -66,12 +66,17 @@ function Proposal() {
     return (
         <div style={{ backgroundColor: "#E4E4E4", minHeight: "100vh" }}>
             <SearchAppBar />
+
             <div style={{ padding: "2rem", width: "50%", marginLeft: "25%" }}>
                 <Card
                     style={{
                         padding: "1rem",
                     }}
                 >
+                    <Typography style={{
+                        fontWeight: 'bold',
+                        marginBottom: '2rem'
+                    }} >Add content and images on HTML website</Typography>
                     <Grid container spacing={2}>
                         <Grid item md={6}>
                             <Typography>
