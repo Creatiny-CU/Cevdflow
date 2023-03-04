@@ -124,6 +124,7 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import Grid from '@mui/material/Grid';
 import SearchIcon from '@mui/icons-material/Search';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -182,8 +183,8 @@ export default function SearchAppBar() {
 
                     </IconButton>
 
-                    <Grid container spacing={2} alignItems="center">
-                        <Grid item md={3} >     <a
+                    <Grid container spacing={8} alignItems="center">
+                        <Grid item  >     <a
                             href='/home'
                             style={{ textDecoration: 'none', color: 'white' }}
                             variant="h6"
@@ -193,6 +194,41 @@ export default function SearchAppBar() {
                         >
                             CevdFlow
                         </a></Grid>
+                        <Grid item >
+                            <Grid container alignItems='center'> <a
+                                href='/home'
+                                style={{ textDecoration: 'none', color: 'white' }}
+                                variant="h6"
+                                noWrap
+                                component="div"
+                                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                            >
+                                My Jobs
+                            </a>
+                                <KeyboardArrowDownIcon /></Grid>
+                        </Grid>
+                        <Grid item >
+                            <Grid container alignItems='center'> <a
+                                href='/home'
+                                style={{ textDecoration: 'none', color: 'white' }}
+                                variant="h6"
+                                noWrap
+                                component="div"
+                                sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                            >
+                                Reports
+                            </a>
+                                <KeyboardArrowDownIcon /></Grid> </Grid>
+                        <Grid item >     <Grid container alignItems='center'> <a
+                            href='/home'
+                            style={{ textDecoration: 'none', color: 'white' }}
+                            variant="h6"
+                            noWrap
+                            component="div"
+                            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        >
+                            Messages
+                        </a> <KeyboardArrowDownIcon /></Grid>  </Grid>
                         {/* <Grid item md={4}>  <Search>
                             <SearchIconWrapper>
                                 <SearchIcon />

@@ -1,4 +1,4 @@
-import { Avatar, Card, Grid, Typography } from "@mui/material";
+import { Avatar, Card, Divider, Grid, Rating, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import SearchAppBar from "./navbar";
 
@@ -115,24 +115,33 @@ function Profile() {
                             style={{
                                 padding: "1rem",
                                 boxShadow: "none",
-                                border: "1px solid #E4E4E4",
+
                                 marginBottom: "1rem",
                             }}
                         >
                             {" "}
-                            <Grid container spacing={2}>
-                                <Grid item md={6}>
+                            <Grid container spacing={5}>
+                                <Grid item md={4}>
                                     {" "}
                                     <p style={{ fontWeight: "bold" }}>Homepage Frontend </p>
                                     <img
                                         style={{
-                                            width: "90%",
+                                            width: "100%",
                                         }}
                                         src="/images/makineIzleme.png"
                                     />
                                 </Grid>
-
-                                <Grid item md={6}>
+                                <Grid item md={4}>
+                                    {" "}
+                                    <p style={{ fontWeight: "bold" }}>Job</p>{" "}
+                                    <p style={{ marginBottom: "0px" }}>
+                                        {" "}
+                                        I have a one page html /css site that I need to turn from
+                                        figma to live site. We need to support responsive and pixel
+                                        perfect.{" "}
+                                    </p>{" "}
+                                </Grid>
+                                <Grid item md={4}>
                                     {" "}
                                     <p style={{ fontWeight: "bold" }}>About</p>{" "}
                                     <p style={{ marginBottom: "0px" }}> Price: $20 </p> <br />{" "}
@@ -141,37 +150,46 @@ function Profile() {
                                     </p>{" "}
                                     <br />{" "}
                                     <p style={{ marginTop: "0px" }}>Contracter: SHDGEYT654</p>
+                                    <Rating name="read-only" value={3} readOnly />
                                 </Grid>
                             </Grid>
                         </Card>
+                        <Divider />
                         <Card
                             style={{
                                 padding: "1rem",
                                 boxShadow: "none",
-                                border: "1px solid #E4E4E4",
                             }}
                         >
-                            <Grid container spacing={2}>
-                                <Grid item md={6}>
+                            <Grid container spacing={5}>
+                                <Grid item md={4}>
                                     {" "}
-                                    <p>Homepage Frontend </p>
+                                    <p style={{ fontWeight: "bold" }}>Homepage Frontend </p>
                                     <img
                                         style={{
-                                            width: "90%",
+                                            width: "100%",
                                         }}
                                         src="/images/2.png"
                                     />
                                 </Grid>
-
-                                <Grid item md={6}>
+                                <Grid item md={4}>
+                                    {" "}
+                                    <p style={{ fontWeight: "bold" }}>Job</p>{" "}
+                                    <p style={{ marginBottom: "0px" }}>
+                                        {" "}
+                                        Looking for an angular developer good in css and html to do some customisation on the same who should be available for 4 hours from now.
+                                    </p>{" "}
+                                </Grid>
+                                <Grid item md={4}>
                                     {" "}
                                     <p style={{ fontWeight: "bold" }}>About</p>{" "}
-                                    <p style={{ marginBottom: "0px" }}> Price: $20 </p> <br />{" "}
+                                    <p style={{ marginBottom: "0px" }}> Price: $55 </p> <br />{" "}
                                     <p style={{ marginTop: "0px", margin: "0px" }}>
                                         Time: 12 hours
                                     </p>{" "}
                                     <br />{" "}
-                                    <p style={{ marginTop: "0px" }}>Contracter: SHDGEYT654</p>
+                                    <p style={{ marginTop: "0px" }}>Contracter: FGDHES76745</p>
+                                    <Rating name="read-only" value={5} readOnly />
                                 </Grid>
                             </Grid>
                         </Card>

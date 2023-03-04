@@ -12,6 +12,7 @@ import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
+    borderRadius: '1rem',
     borderRadius: theme.shape.borderRadius,
     backgroundColor: alpha(theme.palette.common.white, 0.15),
     '&:hover': {
@@ -26,6 +27,7 @@ const Search = styled('div')(({ theme }) => ({
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
+    borderRadius: '1rem',
     padding: theme.spacing(0, 2),
     height: '100%',
     position: 'absolute',
@@ -52,8 +54,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 function Jobs() {
     return (
-        <div style={{ backgroundColor: '#E4E4E4', padding: '10px' }} >
-            <div style={{ marginLeft: '25%', marginRight: '25%', marginBottom: '10px', backgroundColor: '#ffff', justifyContent: 'center', alignItems: 'center' }} >  <Search>
+        <div style={{ backgroundColor: '#E4E4E4', padding: '20px' }} >
+            <div style={{ marginLeft: '25%', marginRight: '25%', marginBottom: '20px', backgroundColor: '#ffff', justifyContent: 'center', alignItems: 'center' }} >  <Search>
                 <SearchIconWrapper>
                     <SearchIcon />
                 </SearchIconWrapper>
@@ -87,7 +89,7 @@ function Jobs() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions style={{ justifyContent: 'right', alignItems: 'right' }} >
-                                    <Button style={{ backgroundColor: 'green', color: 'white', textTransform: 'none' }} size="small">Apply</Button>
+                                    <Button href="/proposal" style={{ backgroundColor: 'green', color: 'white', textTransform: 'none' }} size="small">Apply</Button>
                                 </CardActions>
                             </Card>
                         </Grid>
@@ -111,7 +113,7 @@ function Jobs() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions style={{ justifyContent: 'right', alignItems: 'right' }}>
-                                    <Button style={{ backgroundColor: 'green', color: 'white', textTransform: 'none' }} size="small">Apply</Button>
+                                    <Button href="/proposal" style={{ backgroundColor: 'green', color: 'white', textTransform: 'none' }} size="small">Apply</Button>
                                 </CardActions>
                             </Card>
                         </Grid>
@@ -135,7 +137,7 @@ function Jobs() {
                                     </Typography>
                                 </CardContent>
                                 <CardActions style={{ justifyContent: 'right', alignItems: 'right' }}>
-                                    <Button style={{ backgroundColor: 'green', color: 'white', textTransform: 'none' }} size="small">Apply</Button>
+                                    <Button href="/proposal" style={{ backgroundColor: 'green', color: 'white', textTransform: 'none' }} size="small">Apply</Button>
                                 </CardActions>
                             </Card>
                         </Grid>
