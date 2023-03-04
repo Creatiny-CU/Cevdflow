@@ -50,31 +50,25 @@ pub struct Trade {
 }
 */
 
-
 console.log("My address:", pg.wallet.publicKey.toString());
 const balance = await pg.connection.getBalance(pg.wallet.publicKey);
 console.log(`My balance: ${balance / web3.LAMPORTS_PER_SOL} SOL`);
 
-// start trade with 1 SOL for 1 SOL with 8EngWcVpG9aNYd5vRehpSZ4MoS8gcvnXX6nEdp5pdUZo address
-
-const trade = await pg.program.instruction.startTrade({
-    accounts: {
-        trade: new web3.PublicKey("8EngWcVpG9aNYd5vRehpSZ4MoS8gcvnXX6nEdp5pdUZo"),
-        authority: pg.wallet.publicKey,
-        systemProgram: web3.SystemProgram.programId,
-    },
-    signers: [pg.wallet.payer],
-    data: {
-        amount_offered: 1,
-        amount_requested: 1,
-    },
+// start trade
+const trade = new web3.Account();
+const tradeAccount = await web3.SystemProgram.createAccount({
+    fromPubkey: pg.wallet.publicKey,
+    newAccountPubkey: trade.publicKey,
+    lamports: await web3.connection.getMinimumBalanceForRentExemption(200),
+    space: 200,
 });
-
-console.log("Trade started:", trade);
-
-// get trade info
-
-const tradeInfo = await pg.program.account.trade.fetch( new web3.PublicKey("8EngWcVpG9aNYd5vRehpSZ4MoS8gcvnXX6nEdp5pdUZo"));
-console.log("Trade info:", tradeInfo);
-
-
+const startTrade = new web3.Transaction().add(tradeAccount);
+await web3.sendAndConfirmTransaction(
+    pg.connection,
+    startTrade,
+    [pg.wallet],
+    {
+        skipPreflight: true,
+        commitment: "singleGossip",
+    }
+);
