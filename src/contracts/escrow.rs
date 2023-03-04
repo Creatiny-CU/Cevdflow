@@ -34,11 +34,9 @@ pub struct StartTrade<'info> {
 
 #[account]
 pub struct Trade {
-    // Cantidad que el solicitante desea
     amount_requested: u64,
     mint_requested: Pubkey,
 
-    // Cantidad que el solicitante ofrece
     amount_offered: u64,
     mint_offered: Pubkey,
 
