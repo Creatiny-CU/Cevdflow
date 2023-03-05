@@ -43,6 +43,10 @@ function App() {
   const [provider, setProvider] = useState<PhantomProvider | undefined>(
     undefined
   );
+  const [walletKey, setWalletKey] = useState<PhantomProvider | undefined>(
+    undefined
+  );
+
   /**
    * @description gets Phantom provider, if it exists
    */
@@ -53,6 +57,39 @@ function App() {
       if (provider.isPhantom) return provider as PhantomProvider;
     }
   };
+
+  /**
+   * @description prompts user to connect wallet if it exists
+   */
+  const connectWallet = async () => {
+    // @ts-ignore
+    const { solana } = window;
+
+    if (solana) {
+      try {
+        const response = await solana.connect();
+        console.log("wallet account ", response.publicKey.toString());
+        setWalletKey(response.publicKey.toString());
+      } catch (err) {
+        // { code: 4001, message: 'User rejected the request.' }
+      }
+    }
+  };
+
+  /**
+   * @description disconnect Phantom wallet
+   */
+  const disconnectWallet = async () => {
+    // @ts-ignore
+    const { solana } = window;
+
+    if (walletKey && solana) {
+      await (solana as PhantomProvider).disconnect();
+      setWalletKey(undefined);
+    }
+  };
+
+  // detect phantom provider exists
   useEffect(() => {
     const provider = getProvider();
 
@@ -63,10 +100,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/home" element={<Home />}></Route>
-          <Route path="/profile" index element={<Profile />} />
-          <Route path="/proposal" index element={<Proposal />} />
+          <Route path="/" element={<Home  connectWallet={connectWallet} disconnectWallet={disconnectWallet} provider={provider} walletKey={walletKey} />}></Route>
+          <Route path="/home" element={<Home  connectWallet={connectWallet} disconnectWallet={disconnectWallet} provider={provider} walletKey={walletKey} />}></Route>
+          <Route path="/profile" index element={<Profile  connectWallet={connectWallet} disconnectWallet={disconnectWallet} provider={provider} walletKey={walletKey} />} />
+          <Route path="/proposal" index element={<Proposal  connectWallet={connectWallet} disconnectWallet={disconnectWallet} provider={provider} walletKey={walletKey} />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -2,10 +2,10 @@ import { Avatar, Card, Divider, Grid, Rating, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import SearchAppBar from "./navbar";
 
-function Profile() {
+function Profile( {provider, walletKey , connectWallet, disconnectWallet}) {
     return (
         <div style={{ backgroundColor: "#E4E4E4" }}>
-            <SearchAppBar />
+            <SearchAppBar  connectWallet={connectWallet} disconnectWallet={disconnectWallet} provider={provider} walletKey={walletKey} />
             <Grid
                 style={{
                     padding: "2rem",

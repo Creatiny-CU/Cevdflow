@@ -4,10 +4,10 @@ import SearchAppBar from "./navbar";
 
 
 
-function Home() {
+function Home( {provider, walletKey , connectWallet, disconnectWallet} ) {
     return (
         <div>
-            <SearchAppBar />
+            <SearchAppBar connectWallet={connectWallet} disconnectWallet={disconnectWallet} provider={provider} walletKey={walletKey} />
             <Jobs />
         </div>
     );

@@ -55,7 +55,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-export default function SearchAppBar() {
+export default function SearchAppBar( {provider, walletKey, connectWallet, disconnectWallet} ) {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar style={{ backgroundColor: '#1E1E56' }} position="static">
@@ -128,13 +128,39 @@ export default function SearchAppBar() {
                         </Search></Grid> */}
                         <Grid style={{ right: '20px', position: 'absolute' }} item md={4}>
                             <Grid container spacing={3} >   <Grid item >
-                                <Button style={{
+                                
+                                {provider && !walletKey && (
+                                    <Button
+                                    onClick={connectWallet}
+                                     style={{
+                                        backgroundColor: '#1E1E56',
+                                        color: 'white',
+                                        textDecoration: 'none',
+                                        textTransform: 'none',
+                                        border: '1px solid white'
+                                    }} >Connect Wallet</Button>
+                                    )}
+
+                                    {provider && walletKey && (
+                                    <div>
+                                        <Button
+                                        onClick={disconnectWallet}
+                                        style={{
                                     backgroundColor: '#1E1E56',
                                     color: 'white',
                                     textDecoration: 'none',
                                     textTransform: 'none',
                                     border: '1px solid white'
-                                }} >Connect Wallet</Button>
+                                    }} >Disconnect Wallet</Button>
+                                    </div>
+                                    )}
+
+                                    {!provider && (
+                                    <p>
+                                        No provider found. Install{" "}
+                                        <a href="https://phantom.app/">Phantom Browser extension</a>
+                                    </p>
+                                    )}
                             </Grid>
                                 <Grid item >
                                     <IconButton sx={{ p: 0 }}>
