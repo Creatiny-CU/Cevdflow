@@ -27,7 +27,7 @@ function Profile( {provider, walletKey , connectWallet, disconnectWallet}) {
                                 display: "flex",
                             }}
                         >
-                            <Avatar style={{
+                            <Avatar  alt="Suna Ayhan" src="/images/1668700369329.jpeg" style={{
                                 width: "30%",
                                 height: "30%",
 
@@ -167,7 +167,7 @@ function Profile( {provider, walletKey , connectWallet, disconnectWallet}) {
                                         Time: 12 hours
                                     </p>{" "}
                                     <br />{" "}
-                                    <p style={{ marginTop: "0px" }}>Contracter: SHDGEYT654</p>
+                                    <p style={{ marginTop: "0px" }}>Contracter: 3ZKpxv2JNpHwhYQRTZ498hfijDiKQg9aNeSBuwQFhi71</p>
                                     <Rating name="read-only" value={3} readOnly />
                                 </Grid>
                             </Grid>
@@ -206,7 +206,7 @@ function Profile( {provider, walletKey , connectWallet, disconnectWallet}) {
                                         Time: 12 hours
                                     </p>{" "}
                                     <br />{" "}
-                                    <p style={{ marginTop: "0px" }}>Contracter: FGDHES76745</p>
+                                    <p style={{ marginTop: "0px" }}>Contracter: DwHCuPNmfHoP4uGA6vMZjYm83ALX6o4fjFphonLe9uYj</p>
                                     <Rating name="read-only" value={5} readOnly />
                                 </Grid>
                             </Grid>

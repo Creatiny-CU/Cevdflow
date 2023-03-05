@@ -80,7 +80,12 @@ export default function SearchAppBar( {provider, walletKey, connectWallet, disco
                             component="div"
                             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                         >
-                            CevdFlow
+                            <img
+                                        style={{
+                                            height: "70px",
+                                        }}
+                                        src="/images/logo.png"
+                                    />
                         </a></Grid>
                         <Grid item >
                             <Grid container alignItems='center'> <a
@@ -164,7 +169,7 @@ export default function SearchAppBar( {provider, walletKey, connectWallet, disco
                             </Grid>
                                 <Grid item >
                                     <IconButton sx={{ p: 0 }}>
-                                        <a style={{ textDecoration: 'none' }} href="/profile">  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /></a>
+                                        <a style={{ textDecoration: 'none' }} href="/profile">  <Avatar alt="Suna Ayhan" src="/images/1668700369329.jpeg" /></a>
 
                                     </IconButton>
                                 </Grid>

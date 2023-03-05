@@ -3,6 +3,7 @@ import * as React from "react";
 import {
     Button,
     Card,
+    DialogContent,
     FormControl,
     Grid,
     InputLabel,
@@ -66,7 +67,10 @@ function SimpleDialog(props) {
         <Dialog backdropClick open={open}>
             <DialogTitle style={{
                 fontWeight: 'bold', color: 'green'
-            }} >Congratulations!</DialogTitle>
+            }} >Transaction successfull!</DialogTitle>
+            <DialogContent>
+                Transaction ID: ByYAKmytXp9rSnwDXsCW9pf82Kas6khaM5hMC4w17awL
+            </DialogContent>
 
         </Dialog>
     );
@@ -94,11 +98,13 @@ function Proposal( {provider, walletKey , connectWallet, disconnectWallet}) {
     // call freelancer_send_job_request function from smart contract to send job request. Program id is gnxmTk2njEFwxUPbnZGrK9L8A7gMaoKBtTxKVujt5yy
     // uses solana/web3.js
     const signAndSendTransaction = async () => {
+
+        handleClickOpen();
         const connection = new Connection(clusterApiUrl("devnet"), opts.preflightCommitment);
         const provider2 = new AnchorProvider(connection, walletKey, {
             preflightCommitment: commitmentLevel,
           });
-        const program = new Program(idl, programID, provider2);
+        const program = new Program(idl, programID, provider);
         const tx = await program.rpc.initFreelancer({
             accounts: {
                 owner: walletKey,
