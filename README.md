@@ -9,36 +9,6 @@ CevdFlow is a decentralized platform for managing freelance contracts and paymen
 ## MUI (Material-UI)
 ## Rust
 ## Solana
-# Project Structure
-The project is organized as follows:
-
-```bash
-.
-├── public
-│   ├── index.html
-│   └── favicon.ico
-├── src
-│   ├── components
-│   │   ├── ContractForm.js
-│   │   ├── ContractList.js
-│   │   ├── Header.js
-│   │   ├── Modal.js
-│   │   └── PaymentForm.js
-│   ├── contracts
-│   │   └── escrow.rs
-│   ├── utils
-│   │   ├── connection.js
-│   │   ├── wallet.js
-│   │   └── ...
-│   ├── App.js
-│   ├── index.js
-│   └── ...
-├── README.md
-├── package.json
-├── yarn.lock
-└── ...
-```
-The public directory contains the main index.html file and the favicon.ico file. The src directory contains all the source code of the project, organized into subdirectories for components, contracts, utils, and other top-level files.
 
 The components directory contains all the React components used in the project, including ContractForm, ContractList, Header, Modal, and PaymentForm.
 
