@@ -4,7 +4,7 @@ CevdFlow
 # Description
 CevdFlow is a decentralized platform for managing freelance contracts and payments on the Solana blockchain. The platform provides a streamlined solution for creating, negotiating, and signing contracts, while also ensuring that payments are securely and automatically processed.
 
-#Live Demo
+# Live Demo
 https://github.com/Creatiny-CU/Cevdflow
 
 # Technologies Used
