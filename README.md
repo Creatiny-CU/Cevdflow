@@ -27,7 +27,7 @@ The project will be available at http://localhost:3000/.
 Contributing
 To contribute to the project, follow these steps:
 
-Fork the repository: https://github.com/your-username/cevdflow.git
+Fork the repository: https://github.com/Creatiny-CU/Cevdflow.git
 Create a new branch: git checkout -b my-branch-name
 Make changes and commit them: git commit -m "my changes"
 Push the changes to your fork: git push origin my-branch-name
